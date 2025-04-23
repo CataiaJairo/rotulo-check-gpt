@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificador de Rótulos</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Verificador de Embalagens – ANVISA/MAPA</h1>
+    <form action="/analisar" enctype="multipart/form-data" method="post">
+        <input type="file" name="file" accept="image/png, image/jpeg" required>
+        <button type="submit">Analisar</button>
+    </form>
+
+    {% if texto_extraido %}
+    <h2>Texto extraído:</h2>
+    <pre>{{ texto_extraido }}</pre>
+    {% endif %}
+
+    {% if resultado %}
+    <h2>Relatório GPT:</h2>
+    <pre>{{ resultado }}</pre>
+    {% endif %}
+</body>
+</html>
