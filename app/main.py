@@ -29,8 +29,9 @@ async def analisar(request: Request, file: UploadFile = File(...)):
 Você é um auditor técnico da ANVISA e MAPA. Analise o seguinte texto extraído de um rótulo de alimento e diga se está conforme com as normas brasileiras. Dê um parecer item por item, com base nas principais exigências (denominação, peso, alergênicos, validade, conservação, SIF, CNPJ, tabela nutricional, etc). Seja técnico e direto.
 
 Texto extraído:
-"""{texto_extraido}"""
-    """
+{texto_extraido}
+"""
+
 
     response = openai.ChatCompletion.create(
         model="gpt-4-turbo",
