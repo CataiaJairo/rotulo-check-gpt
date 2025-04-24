@@ -48,7 +48,7 @@ Texto extraído:
 '''
 
     response = openai.ChatCompletion.create(
-        model="gpt-4-turbo",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "Você é um especialista em rotulagem técnica de alimentos no Brasil."},
             {"role": "user", "content": prompt}
